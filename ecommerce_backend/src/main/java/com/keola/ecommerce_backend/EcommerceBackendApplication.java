@@ -3,7 +3,7 @@ package com.keola.ecommerce_backend;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "com.keola.ecommerce_backend")
+@SpringBootApplication
 public class EcommerceBackendApplication {
 
     public static void main(String[] args) {

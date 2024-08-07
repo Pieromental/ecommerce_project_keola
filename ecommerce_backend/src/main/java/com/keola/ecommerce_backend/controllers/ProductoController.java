@@ -4,12 +4,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import com.keola.ecommerce_backend.config.BaseController;
 import com.keola.ecommerce_backend.models.Producto;
 import com.keola.ecommerce_backend.service.ProductoService;
 
 @RestController
 @RequestMapping("/api/productos")
-public class ProductoController {
+public class ProductoController extends BaseController{
     @Autowired
     private ProductoService productoService;
 
@@ -31,5 +32,10 @@ public class ProductoController {
     @DeleteMapping("/{id}")
     public void deleteProducto(@PathVariable Long id) {
         productoService.deleteProducto(id);
+    }
+
+    @PostMapping("/import")
+    public void importProductosFromAPI() {
+        productoService.importProductosFromAPI();
     }
 }

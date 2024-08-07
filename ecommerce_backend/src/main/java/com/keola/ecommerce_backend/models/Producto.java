@@ -10,13 +10,16 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombre;
-    private String descripcion;
-    private Double precio;
-    private String imagenUrl;
+    private String title;
+    private String description;
+    private String category;
+    private Double price;
+    private String brand;
+    private String sku;
     private Integer stock;
+    private String thumbnail;
 
-    // Getters y Setters
+    // Getters y Setters esenciales
 
     public Long getId() {
         return id;
@@ -26,36 +29,52 @@ public class Producto {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getTitle() {
+        return title;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public Double getPrecio() {
-        return precio;
+    public String getCategory() {
+        return category;
     }
 
-    public void setPrecio(Double precio) {
-        this.precio = precio;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public String getImagenUrl() {
-        return imagenUrl;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
     }
 
     public Integer getStock() {
@@ -64,5 +83,13 @@ public class Producto {
 
     public void setStock(Integer stock) {
         this.stock = stock;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 }

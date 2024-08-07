@@ -3,6 +3,7 @@ package com.keola.ecommerce_backend.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import com.keola.ecommerce_backend.config.BaseController;
 import com.keola.ecommerce_backend.models.Pedido;
 import com.keola.ecommerce_backend.service.PedidoService;
 
@@ -11,7 +12,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/api/pedidos")
-public class PedidoController {
+public class PedidoController extends BaseController {
     @Autowired
     private PedidoService pedidoService;
 
