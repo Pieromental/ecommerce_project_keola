@@ -26,7 +26,7 @@ Este es un proyecto de e-commerce que consta de un backend desarrollado con Spri
 
 El backend está desarrollado con Spring Boot y se configura mediante variables de entorno en Docker. Asegúrate de configurar las siguientes variables en el archivo `docker-compose.yml`:
 
-    ```yaml
+ 
     version: '3.8'
 
     services:
