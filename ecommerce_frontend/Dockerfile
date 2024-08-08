@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build --configuration=production && ls -la /app/dist/ecommerce_frontend
+RUN npm run build --configuration=production
 
 # Stage 2: Serve the application with Nginx
 FROM nginx:alpine
