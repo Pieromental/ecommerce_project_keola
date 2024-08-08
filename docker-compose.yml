@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./ecommerce_backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - mongo
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/ecommerce_keola
+      - SPRING_DATASOURCE_USERNAME=ecommerce_user
+      - SPRING_DATASOURCE_PASSWORD=123456
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/ecommerce_keola
+
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: ecommerce_keola
+      POSTGRES_USER: ecommerce_user
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "5432:5432"
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
