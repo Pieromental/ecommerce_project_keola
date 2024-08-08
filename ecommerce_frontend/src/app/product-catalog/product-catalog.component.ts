@@ -4,13 +4,16 @@ import { ProductService, Product } from '../product.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CommonModule } from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-product-catalog',
   templateUrl: './product-catalog.component.html',
   styleUrls: ['./product-catalog.component.css'],
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatGridListModule]
+  imports: [CommonModule, MatCardModule, MatGridListModule,MatButtonModule, MatDividerModule, MatIconModule]
 })
 export class ProductCatalogComponent implements OnInit {
   products: Product[] = [];
