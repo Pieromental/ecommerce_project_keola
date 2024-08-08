@@ -3,7 +3,6 @@ package com.keola.ecommerce_backend.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.keola.ecommerce_backend.config.BaseController;
 import com.keola.ecommerce_backend.models.Cliente;
 import com.keola.ecommerce_backend.service.ClienteService;
 
